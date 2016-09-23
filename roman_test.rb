@@ -68,4 +68,19 @@ class TestRoman < Minitest::Test
     assert_equal 'X', @roman.convert(10)
   end
   
+  def test_roman_converts_13_to_XIII
+    assert_equal 'XIII', @roman.convert(13)
+  end
+  
+  def test_roman_converts_14_to_XIV
+    assert_equal 'XIV', @roman.convert(14)
+  end
+  
+  def test_roman_converts_30_to_XXX
+    assert_equal 'XXX', @roman.convert(30)
+  end
+  
+  def test_roman_is_baller
+    assert_equal 'XXXVIII', @roman.convert(38)
+  end
 end
