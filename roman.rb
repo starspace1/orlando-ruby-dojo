@@ -1,16 +1,12 @@
 class Roman
 
   def convert(num)
-    if num < 4
-      'I' * num
-    elsif num < 6
-      'I' * (5 - num) + 'V'
-    elsif num < 9
-      'V' +  'I' * (num - 5)
-    elsif num == 9
-      'IX'
+    if num == 4
+      'IV'
+    elsif (num < 9)
+      ('I' * num).sub('IIIII', 'V')
     else
-      'X'
+      num == 10 ? 'X': 'IX'
     end
   end
 
